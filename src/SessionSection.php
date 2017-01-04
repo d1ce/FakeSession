@@ -21,7 +21,7 @@ use Nette;
 class SessionSection extends Nette\Http\SessionSection
 {
 
-	private $data = [];
+	private $data = array();
 
 
 	public function __construct(Nette\Http\Session $session, $name)
@@ -86,7 +86,7 @@ class SessionSection extends Nette\Http\SessionSection
 
 	public function remove()
 	{
-		$this->data = [];
+		$this->data = array();
 	}
 
 }

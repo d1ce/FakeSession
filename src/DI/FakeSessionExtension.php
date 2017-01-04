@@ -25,9 +25,9 @@ class FakeSessionExtension extends Nette\DI\CompilerExtension
 	/**
 	 * @var array
 	 */
-	public $defaults = [
+	public $defaults = array(
 		'enabled' => '%consoleMode%',
-	];
+	);
 
 
 
@@ -43,7 +43,7 @@ class FakeSessionExtension extends Nette\DI\CompilerExtension
 
 		$session = $builder->addDefinition($originalServiceName)
 			->setClass('Nette\Http\Session')
-			->setFactory('Kdyby\FakeSession\Session', [$this->prefix('@original')]);
+			->setFactory('Kdyby\FakeSession\Session', array($this->prefix('@original')));
 
 		if ($config['enabled']) {
 			$session->addSetup('disableNative');

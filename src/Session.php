@@ -25,7 +25,7 @@ class Session extends Nette\Http\Session
 	/**
 	 * @var array|SessionSection[]
 	 */
-	private $sections = [];
+	private $sections = array();
 
 	/**
 	 * @var bool
